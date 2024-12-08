@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 94%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 100% 60%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 0%;
+    --input: 0 0% 94%;
+    --ring: 0 0% 0%;
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+.neo-brutalist-card {
+  @apply bg-card border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+         hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-200
+         hover:translate-x-[-4px] hover:translate-y-[-4px];
+}
+
+.neo-brutalist-button {
+  @apply bg-white border-2 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+         hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200
+         hover:translate-x-[-4px] hover:translate-y-[-4px] active:translate-x-[0px] active:translate-y-[0px]
+         active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+}
